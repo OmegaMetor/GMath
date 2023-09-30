@@ -127,6 +127,7 @@ YYEXPORT void delete_equation(RValue& Result, CInstance* selfinst, CInstance* ot
 {
     int equation = YYGetReal(arg, 0);
     if(!_equation_exists(equation)) return;
+    delete (equations.at(equation));
     equations.at(equation) = nullptr;
 }
 
