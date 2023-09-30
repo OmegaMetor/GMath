@@ -24,14 +24,9 @@ YYEXPORT void Example(RValue& Result, CInstance* selfinst, CInstance* otherinst,
 
 bool _equation_exists(int id)
 {
-    if(equations.size() -1 < id)
-    {
-        return false;
-    }
-    if(equations.at(id) == nullptr)
-    {
-        return false;
-    }
+    if(equations.size() == 0) return false;
+    if(equations.size() -1 < id) return false;
+    if(equations.at(id) == nullptr) return false;
     return true;
 }
 
